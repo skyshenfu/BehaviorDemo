@@ -13,11 +13,6 @@ public class SnackBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nest);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(findViewById(R.id.fab), "Show The Snackbar", Snackbar.LENGTH_SHORT).show();
-            }
-        });
+        fab.setOnClickListener(view -> Snackbar.make(findViewById(R.id.fab), "Show The Snackbar", Snackbar.LENGTH_SHORT).show());
     }
 }

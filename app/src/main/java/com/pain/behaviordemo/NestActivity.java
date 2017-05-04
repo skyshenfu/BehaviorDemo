@@ -16,12 +16,9 @@ public class NestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nest);
         scrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(scrollView);
-                bottomSheetBehavior.setState(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED?BottomSheetBehavior.STATE_EXPANDED:BottomSheetBehavior.STATE_COLLAPSED);
-            }
+        fab.setOnClickListener(view -> {
+            BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(scrollView);
+            bottomSheetBehavior.setState(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED?BottomSheetBehavior.STATE_EXPANDED:BottomSheetBehavior.STATE_COLLAPSED);
         });
     }
 }

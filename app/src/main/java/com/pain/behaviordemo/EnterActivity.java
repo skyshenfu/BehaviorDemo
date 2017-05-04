@@ -49,12 +49,7 @@ public class EnterActivity extends AppCompatActivity {
                 startActivity(new Intent(context,SimpleCollapsingActivity.class));
             }
         });
-        imageCollspacing.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, ImageActivity.class));
-            }
-        });
+        imageCollspacing.setOnClickListener(v->startActivity(new Intent(context, ImageActivity.class)));
     }
 
     private void initViews() {
